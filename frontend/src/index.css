@@ -1,0 +1,544 @@
+/* General Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #f8fafc, #eff6ff);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.header-nav {
+  display: flex;
+  gap: 2rem;
+}
+.header-link {
+  font-weight: 500;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+.header-link:hover {
+  color: #2563eb;
+}
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e2e8f0; /* slate-200 */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+}
+
+.header-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header-nav {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-link {
+  color: #475569; /* slate-600 */
+  font-weight: 500;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #2563eb; /* blue-600 */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+.hero-highlight {
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+  font-size: 1.25rem;
+  color: #475569;
+  max-width: 640px;
+  margin: 0 auto;
+}
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem; /* mb-16 */
+}
+
+.hero-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem; /* text-5xl */
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #2563eb, #9333ea); /* blue-600 to purple-600 */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem; /* text-xl */
+  color: #475569; /* slate-600 */
+  max-width: 42rem; /* 2xl container */
+  margin: 0 auto;
+}
+
+/* Book Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Book Card */
+.book-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+.book-card-header {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-card-icon {
+  width: 6rem;
+  height: 8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.book-card-body {
+  padding: 1.5rem;
+}
+.book-card-title {
+    text-decoration: none;
+  
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.book-card-author {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+.book-card-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.view-details-btn {
+  display: flex;
+  /* width: 100%; */
+    font-family: 'Inter', sans-serif;
+justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+/* BookCard extras */
+.book-card-img {
+  width: 100%;
+  height: 21rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.book-card-price {
+  color: #eb2525; /* blue-600 */
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.book-card-rating {
+  color: #facc15; /* yellow-500 */
+  margin-top: 0.25rem;
+}
+
+.book-card-availability {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.book-card-availability.in-stock {
+  color: #16a34a; /* green-600 */
+}
+.book-card-availability.out-of-stock {
+  color: #dc2626; /* red-600 */
+}
+
+
+/* Gradient backgrounds for books */
+.bg-cyan { background: linear-gradient(to bottom right, #22d3ee, #2563eb); }
+
+/* Gradient button styles */
+.btn-blue { background: linear-gradient(to right, #2563eb, #1d4ed8); }
+.btn-blue:hover { background: linear-gradient(to right, #1d4ed8, #1e40af); }
+.btn-cyan { background: linear-gradient(to right, #0891b2, #0369a1); }
+.btn-cyan:hover { background: linear-gradient(to right, #0369a1, #021018); }
+
+/* Load More Button */
+.load-more-btn {
+  background: white;
+  color: #334155;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.load-more-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Filters Container */
+.filters-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* gap-3 */
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem; /* p-4 */
+  border-radius: 0.75rem; /* rounded-lg */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* shadow-md */
+  margin-bottom: 2rem; /* spacing from grid */
+}
+
+/* Input & Select */
+.filter-input,
+.filter-select {
+  border: 1px solid #d1d5db; /* border-slate-300 */
+  border-radius: 0.5rem; /* rounded */
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #374151; /* text-slate-700 */
+  transition: all 0.2s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); /* ring-blue-500 */
+}
+
+/* Narrow inputs for price */
+.filter-input.w-24 {
+  width: 6rem;
+}
+
+/* Pagination card (centered, matches Filters/BookCard style) */
+.pagination-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: #ffffff;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.75rem; /* rounded-xl look */
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06); /* soft card shadow */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.pagination-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9; /* slate-100 */
+  border: none;
+  font-weight: 600;
+  color: #1f2937; /* slate-800 */
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.pagination-button:hover:not(.disabled) {
+  background: #e2e8f0; /* slate-200 */
+  transform: translateY(-1px);
+}
+
+.pagination-button.disabled,
+.pagination-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Page info text */
+.pagination-info {
+  font-size: 0.95rem;
+  color: #475569; /* slate-600 */
+  font-weight: 600;
+}
+
+.book-card-labels {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.book-card-price-label,
+.book-card-rating-label,
+.book-card-availability-label {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 9999px; /* pill shape */
+  display: inline-block;
+}
+
+.book-card-price-label {
+  background-color: #e0f2fe; /* light blue */
+  color: #0369a1;           /* darker blue */
+}
+
+.book-card-rating-label {
+  background-color: #fef9c3; /* light yellow */
+  color: #ca8a04;           /* golden */
+}
+
+.book-card-availability-label.in-stock {
+  background-color: #dcfce7; /* light green */
+  color: #166534;
+}
+
+.book-card-availability-label.out-of-stock {
+  background-color: #fee2e2; /* light red */
+  color: #991b1b;
+}
+
+
+.footer {
+  background: #fff;
+  border-top: 1px solid #e2e8f0; /* like border-slate-200 */
+  margin-top: 5rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  color: #475569; /* slate-600 */
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: #64748b; /* slate-500 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #2563eb; /* blue-600 */
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: #94a3b8; /* slate-400 */
+}
+
+.book-detail-page {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.detail-header {
+  margin-bottom: 20px;
+}
+
+.back-link {
+  color: #000205;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-img-wrapper {
+  flex: 1;
+}
+
+.detail-img {
+  width: 100%;
+  max-height: 500px;
+  /* object-fit: cover; */
+  border-radius: 12px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.detail-author {
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.detail-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Reuse book-card label styles */
+.book-card-price-label,
+.book-card-rating-label,
+.book-card-availability-label {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f1f1f1;
+}
+
+.in-stock {
+  color: green;
+}
+
+.out-of-stock {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline; /* or you can change color */
+  color: rgba(0, 81, 255, 0.445); /* example */
+}
