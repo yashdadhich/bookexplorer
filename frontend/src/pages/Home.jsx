@@ -31,7 +31,7 @@ export default function Home() {
         minPrice: priceRange.min,
         maxPrice: priceRange.max,
       };
-      const res = await axios.get("http://localhost:5000/api/books/", {
+      const res = await axios.get("https://bookexplorer-3.onrender.com/api/books/", {
         params,
       });
       setBooks(res.data.books);

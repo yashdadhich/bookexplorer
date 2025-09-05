@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000"; // backend server
+const API_BASE = "https://bookexplorer-3.onrender.com"; // backend server
 
 // fetch all books (with optional query params)
 export async function fetchBooks() {

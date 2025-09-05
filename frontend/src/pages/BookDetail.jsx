@@ -12,7 +12,7 @@ export default function BookDetail() {
     const fetchBook = async () => {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:5000/api/books/${id}`);
+        const res = await axios.get(`https://bookexplorer-3.onrender.com/api/books/${id}`);
         setBook(res.data);
         setLoading(false);
       } catch (err) {
